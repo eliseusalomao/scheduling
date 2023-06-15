@@ -1,5 +1,6 @@
 package br.com.main;
 
+import br.com.event.Event;
 import br.com.event.Mandatory;
 import br.com.scheduling.Scheduling;
 import br.com.scheduling.SchedulingController;
@@ -12,6 +13,8 @@ public class Main {
 
 		SchedulingController.getInstance().insert(
 				new Scheduling("15/06/2023", "13:00", "Apresentação", Mandatory.FACULTATIVO));
+		SchedulingController.getInstance().insert(
+				new Scheduling("16/06/2023", "14:00", "Lucros liquidos da empresa", Mandatory.OBRIGATORIO));
 		SchedulingController.getInstance().insert(
 				new Scheduling("16/06/2023", "14:00", "Lucros liquidos da empresa", Mandatory.OBRIGATORIO));
 		
@@ -28,6 +31,8 @@ public class Main {
 		UserController.getInstance().insertUser(user3);
 		
 		System.out.println(UserController.getInstance().listUsers());
+		System.out.println("\n \tReuniões agendadas: \n");
+		System.out.println(Event.getEventsList());
 	}
 
 }

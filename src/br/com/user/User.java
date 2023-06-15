@@ -27,6 +27,7 @@ public class User {
 	}
 	
 	public User(String nome, String email) {
+		this.setId(0);
 		this.setNome(nome);
 		this.setEmail(email);
 		this.setSchedule(new ArrayList<Scheduling>());

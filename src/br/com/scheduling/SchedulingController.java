@@ -20,8 +20,8 @@ public class SchedulingController {
 			return null;
 		}
 		
-		schedulingRepository.insert(scheduling);
-		return scheduling;
+		Scheduling inserted = schedulingRepository.insert(scheduling);
+		return inserted;
 	}
 	
 	
